@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite " parallel="tests" thread-count="2">
+<listeners>
+    <listener class-name="test.Listeners"></listener>
+</listeners>
+    <test name="Test">
+    <classes>
+        <class name="test.day1"/>
+        <class name="test.day2"/>
+        <class name="test.day4">
+            <methods>
+                <include name="Login.*"/>
+            </methods>
+        </class>
+
+    </classes>
+</test>
+    <parameter name="URL" value="www.google.com"/>
+    <parameter name="URL1" value="www.facebook.com"/>
+    <test name="Car Test">
+        <classes>
+            <class name="test.day3">
+                <methods>
+                    <exclude name="MobileLoginCar"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
