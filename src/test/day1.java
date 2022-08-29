@@ -14,6 +14,11 @@ public class day1 {
     {
         System.out.println("After Suite");
     }
+    @AfterSuite
+    public void after()
+    {
+        System.out.println("After Suite");
+    }
     @Test(groups ={"Smoke"})
     public void Demo() {
         System.out.println("Hello world !");
